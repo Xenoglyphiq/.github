@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="-48 -48 96 96" role="img">
+<title>Xenoglyphiq mark</title>
+<defs><mask id="m-weave-0" maskUnits="userSpaceOnUse" x="-10000" y="-10000" width="20000" height="20000"><rect x="-10000" y="-10000" width="20000" height="20000" fill="white"/><polygon points="0,-28 24.25,-14 24.25,14 0,28 -24.25,14 -24.25,-14" fill="black" stroke="black" stroke-width="11.2" stroke-linejoin="round"/><polygon points="-16,-12 8.25,2 8.25,30 -16,44 -40.25,30 -40.25,2" fill="black" stroke="black" stroke-width="11.2" stroke-linejoin="round"/></mask><mask id="m-weave-1" maskUnits="userSpaceOnUse" x="-10000" y="-10000" width="20000" height="20000"><rect x="-10000" y="-10000" width="20000" height="20000" fill="white"/><polygon points="-16,-12 8.25,2 8.25,30 -16,44 -40.25,30 -40.25,2" fill="black" stroke="black" stroke-width="11.2" stroke-linejoin="round"/></mask></defs>
+<polygon points="16,-44 40.25,-30 40.25,-2 16,12 -8.25,-2 -8.25,-30" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" mask="url(#m-weave-0)"/>
+<polygon points="0,-28 24.25,-14 24.25,14 0,28 -24.25,14 -24.25,-14" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" mask="url(#m-weave-1)"/>
+<polygon points="-16,-12 8.25,2 8.25,30 -16,44 -40.25,30 -40.25,2" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+</svg>

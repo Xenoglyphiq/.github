@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="-48 -48 96 96" role="img">
+<title>Xenoglyphiq</title>
+<style>
+  .h0 { stroke: #F6C177 } .h1 { stroke: #EB6F92 } .h2 { stroke: #8E2A55 }
+  .tx { fill: #1E1A1C } .ts { fill: #6B5F64 }
+  @media (prefers-color-scheme: dark) {
+    .h0 { stroke: #8E2A55 } .h2 { stroke: #F6C177 }
+    .tx { fill: #F7EDEF } .ts { fill: #C9A9B6 }
+  }
+</style>
+<polygon class="h0" points="14,-40 36.52,-27 36.52,-1 14,12 -8.52,-1 -8.52,-27" fill="none" stroke-width="7" stroke-linejoin="round"/>
+<polygon class="h1" points="0,-26 22.52,-13 22.52,13 0,26 -22.52,13 -22.52,-13" fill="none" stroke-width="7" stroke-linejoin="round"/>
+<polygon class="h2" points="-14,-12 8.52,1 8.52,27 -14,40 -36.52,27 -36.52,1" fill="none" stroke-width="7" stroke-linejoin="round"/>
+</svg>

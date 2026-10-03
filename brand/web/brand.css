@@ -1,0 +1,47 @@
+:root {
+  --xg-amber: #F6C177;
+  --xg-rose: #EB6F92;
+  --xg-wine: #8E2A55;
+  --xg-ember4-1: #F6C177;
+  --xg-ember4-2: #F0907F;
+  --xg-ember4-3: #D9507F;
+  --xg-ember4-4: #8E2A55;
+  --xg-ink: #1E1A1C;
+  --xg-ink-soft: #6B5F64;
+  --xg-paper: #FAF7F5;
+  --xg-night: #1C1117;
+  --xg-on-night: #F7EDEF;
+  --xg-on-night-soft: #C9A9B6;
+  --xg-white: #FFFFFF;
+  --xg-bg: var(--xg-paper);
+  --xg-text: var(--xg-ink);
+  --xg-text-soft: var(--xg-ink-soft);
+  --xg-font: 'Chakra Petch', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --xg-bg: var(--xg-night); --xg-text: var(--xg-on-night); --xg-text-soft: var(--xg-on-night-soft); }
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/ChakraPetch-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Chakra Petch';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/ChakraPetch-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Chakra Petch';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/ChakraPetch-SemiBold.ttf') format('truetype');
+}
+
+html { font-synthesis: none; }

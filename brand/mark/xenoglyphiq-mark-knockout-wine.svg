@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="-60 -60 120 120" role="img">
+<title>Xenoglyphiq mark knocked out of a wine tile</title>
+<rect x="-60" y="-60" width="120" height="120" rx="26" fill="#8E2A55"/>
+<defs><mask id="m-weave-0" maskUnits="userSpaceOnUse" x="-10000" y="-10000" width="20000" height="20000"><rect x="-10000" y="-10000" width="20000" height="20000" fill="white"/><polygon points="0,-22.96 19.88,-11.48 19.88,11.48 0,22.96 -19.88,11.48 -19.88,-11.48" fill="black" stroke="black" stroke-width="9.18" stroke-linejoin="round"/><polygon points="-13.12,-9.84 6.76,1.64 6.76,24.6 -13.12,36.08 -33,24.6 -33,1.64" fill="black" stroke="black" stroke-width="9.18" stroke-linejoin="round"/></mask><mask id="m-weave-1" maskUnits="userSpaceOnUse" x="-10000" y="-10000" width="20000" height="20000"><rect x="-10000" y="-10000" width="20000" height="20000" fill="white"/><polygon points="-13.12,-9.84 6.76,1.64 6.76,24.6 -13.12,36.08 -33,24.6 -33,1.64" fill="black" stroke="black" stroke-width="9.18" stroke-linejoin="round"/></mask></defs>
+<polygon points="13.12,-36.08 33,-24.6 33,-1.64 13.12,9.84 -6.76,-1.64 -6.76,-24.6" fill="none" stroke="#FFFFFF" stroke-width="3.28" stroke-linejoin="round" mask="url(#m-weave-0)"/>
+<polygon points="0,-22.96 19.88,-11.48 19.88,11.48 0,22.96 -19.88,11.48 -19.88,-11.48" fill="none" stroke="#FFFFFF" stroke-width="3.28" stroke-linejoin="round" mask="url(#m-weave-1)"/>
+<polygon points="-13.12,-9.84 6.76,1.64 6.76,24.6 -13.12,36.08 -33,24.6 -33,1.64" fill="none" stroke="#FFFFFF" stroke-width="3.28" stroke-linejoin="round"/>
+</svg>

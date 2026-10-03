@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="-64 -64 128 128" role="img">
+<title>Xenoglyphiq 5-hex display chain (light backgrounds)</title>
+<polygon points="32,-60 56.25,-46 56.25,-18 32,-4 7.75,-18 7.75,-46" fill="none" stroke="#F6C177" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="16,-44 40.25,-30 40.25,-2 16,12 -8.25,-2 -8.25,-30" fill="none" stroke="#F09884" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="0,-28 24.25,-14 24.25,14 0,28 -24.25,14 -24.25,-14" fill="none" stroke="#EB6F92" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="-16,-12 8.25,2 8.25,30 -16,44 -40.25,30 -40.25,2" fill="none" stroke="#BC4C74" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="-32,4 -7.75,18 -7.75,46 -32,60 -56.25,46 -56.25,18" fill="none" stroke="#8E2A55" stroke-width="4" stroke-linejoin="round"/>
+</svg>

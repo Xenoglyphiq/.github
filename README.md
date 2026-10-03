@@ -1,33 +1,11 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Xenoglyphiq/.github/main/brand/banners/png/github-banner-dark.png">
-  <img alt="Xenoglyphiq: Lost nothing in translation" src="https://raw.githubusercontent.com/Xenoglyphiq/.github/main/brand/banners/png/github-banner-light.png">
-</picture>
+# Xenoglyphiq/.github
 
-# Xenoglyphiq
+This repo holds the organization-wide files for **Xenoglyphiq**.
 
-**Lost nothing in translation.**
-
-Ports of useful libraries into **Swift**, **Go**, **Nim**, **Zig**, and sometimes **Rust**.
-The goal is to take on a whole project in one language, or try the same one in a different
-language just for fun.
-
-Each port aims to read like it was written natively in its language, not translated word
-for word. Each one keeps the original library's name and credits the upstream project.
-
-## Ports
-
-| Library | Swift | Go | Nim | Zig | Rust |
-|---|---|---|---|---|---|
-| *coming soon* | | | | | |
-
-## Finding a port
-
-Ports are named the way their own ecosystem names things, for example `go-toml`,
-`swift-toml`, `nim-toml`, `zig-toml`, `toml-rs`. See
-[NAMING.md](https://github.com/Xenoglyphiq/.github/blob/main/NAMING.md) for the full
-conventions.
-
-## Contributing
-
-Want to port something? Start with
-[CONTRIBUTING.md](https://github.com/Xenoglyphiq/.github/blob/main/CONTRIBUTING.md).
+- [`profile/README.md`](profile/README.md) is the org's public profile page.
+- [`BRAND.md`](BRAND.md) is the brand guide: the mark, color, type, lockups, and banners.
+- [`NAMING.md`](NAMING.md) covers how ports are named in each language.
+- [`CONTRIBUTING.md`](CONTRIBUTING.md) explains how to contribute a port. GitHub also
+  applies it to every repo in the org that doesn't have its own.
+- [`brand/`](brand/) contains all brand assets, plus the tokens and build script that
+  generate them.

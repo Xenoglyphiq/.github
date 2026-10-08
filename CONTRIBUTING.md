@@ -58,9 +58,19 @@ in the [org profile](profile/README.md).
 
 ## Style
 
-Use the language's standard formatter and linter (`swift-format`, `gofmt`/`go vet`,
-`ruff`, `ktlint`, `rustfmt`/`clippy`, `nimpretty`, `zig fmt`, `JuliaFormatter`).
-Formatting isn't up for discussion; idioms are.
+Use the language's standard formatter and linter. Formatting isn't up for discussion;
+idioms are.
+
+| Language | Formatter and linter |
+|---|---|
+| Swift | `swift-format` |
+| Go | `gofmt`, `go vet` |
+| Python | `ruff` |
+| Kotlin | `ktlint` |
+| Rust | `rustfmt`, `clippy` |
+| Nim | `nimpretty` |
+| Zig | `zig fmt` |
+| Julia | `JuliaFormatter` |
 
 ## License
 

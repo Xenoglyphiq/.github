@@ -7,12 +7,16 @@
 
 **Lost nothing in translation.**
 
-Ports of useful libraries into **Swift**, **Nim**, **Zig** and **Julia**, with **Go** and **Python** next.
+Useful libraries, each ported to the languages it's needed in: **Swift**, **Go**, **Python**,
+**Kotlin**, **Rust**, **Nim**, **Zig** and **Julia**. The first ports are in Swift, Nim, Zig
+and Julia, with Go and Python next.
+
 The goal is to take on a whole project in one language, or try the same one in a different
 language just for fun.
 
-Each port aims to read like it was written natively in its language, not translated word
-for word. Each one keeps the original library's name and credits the upstream project.
+Each library is written down once, as a spec with shared test cases, and every port passes
+the same cases. Each port aims to read like it was written natively in its language, not
+translated word for word, and credits the format or project it implements.
 
 ## Ports
 
@@ -26,12 +30,12 @@ Install instructions and examples for every port are at **[docs.xenoglyphiq.dev]
 
 ## Finding a port
 
-Ports are named the way their own ecosystem names things, for example `go-toml`,
-`swift-toml`, `nim-toml`, `zig-toml`, `toml-rs`. See
-[NAMING.md](https://github.com/Xenoglyphiq/.github/blob/main/NAMING.md) for the full
-conventions.
+Each library has a spec repo, `<lib>-spec`, and one repo per language, `<lib>-<language>`
+(Julia: `<Lib>.jl`). For example, PMTiles is `pmtiles-spec`, `pmtiles-swift`, `pmtiles-nim`
+and `pmtiles-zig`. Package names follow each language's own conventions; see
+[NAMING.md](https://github.com/Xenoglyphiq/.github/blob/main/NAMING.md).
 
 ## Contributing
 
-Want to port something? Start with
+Want to fix something or add a port? Start with
 [CONTRIBUTING.md](https://github.com/Xenoglyphiq/.github/blob/main/CONTRIBUTING.md).

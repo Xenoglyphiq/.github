@@ -1,66 +1,53 @@
-# Naming ports
+# Naming
 
-Every Xenoglyphiq port is named the way **its own ecosystem** names things, not by one
-org-wide pattern. A Go developer should find a Go port where they expect a Go library to
-be, under a name that looks native to them.
+Every Xenoglyphiq library has **one spec repo** and **one repo per language**, with the
+package at the repo root. Repo names follow one pattern across languages, so a library's
+ports sit next to each other in the org. The name people actually type (module, package,
+crate, import) follows the language's own rules.
 
-The repo name is for browsing. The name people actually type (module, package, crate,
-import) follows the language's own rules, listed below.
+## Repos
 
-## Always
+| Repo | Name | Example (library `pmtiles`) |
+|---|---|---|
+| Spec | `<lib>-spec` | `pmtiles-spec` |
+| Port | `<lib>-<language>` | `pmtiles-swift`, `pmtiles-zig` |
+| Julia port | `<Lib>.jl` (Julia's General registry expects the suffix) | `RobotsTxt.jl` |
 
-- **Keep the upstream name.** People search for the library they already know. `toml`
-  stays `toml`; do not rename it.
-- **Credit the original** in the repo description and README: `Go port of <upstream>
-  (<link>)`.
-- **Add GitHub topics**: `port`, the language (`go`, `swift`, `nim`, `zig`, `rust`), and
-  the upstream name.
-- **Check the registry first** (pkg.go.dev, Swift Package Index, Nimble, crates.io). If
-  the name is taken, choose a distinctive name instead of bolting on an org prefix like
-  `xg-`.
+`<lib>` is the library's short id, lowercase with no separators (`pmtiles`, `robotstxt`).
+`<Lib>` is its display name in Julia's style (`RobotsTxt`).
 
-## Per language
+## Packages
 
-| Language | Repo name | Name people type | Example (upstream `toml`) |
+| Language | Repo | Package | Import |
 |---|---|---|---|
-| Go | `go-<name>` | Module `github.com/Xenoglyphiq/go-<name>`, package `<name>` | repo `go-toml`, `import "github.com/Xenoglyphiq/go-toml"`, used as `toml.Parse(...)` |
-| Swift | `swift-<name>` | Package and product in UpperCamelCase | repo `swift-toml`, `import TOML` |
-| Nim | `nim-<name>` | Nimble package `<name>`, module `<name>.nim` | repo `nim-toml`, `nimble install toml`, `import toml` |
-| Zig | `zig-<name>` | Package and module in snake_case | repo `zig-toml`, `.name = .toml` in `build.zig.zon`, `@import("toml")` |
-| Rust | `<name>-rs` | Crate `<name>` (kebab-case on crates.io, snake_case in code) | repo `toml-rs`, `cargo add toml`, `use toml;` |
+| Swift | `<lib>-swift` | products `<Lib>` (core) and `<Lib>IO` | `import <Lib>` |
+| Go | `<lib>-go` | module `github.com/xenoglyphiq/<lib>-go` | `<lib>`, `<lib>io` |
+| Python | `<lib>-python` | PyPI `xenoglyphiq-<lib>` | `import xenoglyphiq_<lib>` |
+| Kotlin | `<lib>-kotlin` | Maven `com.xenoglyphiq:<lib>-core`, `:<lib>-io` | `com.xenoglyphiq.<lib>` |
+| Rust | `<lib>-rust` | crate `xenoglyphiq-<lib>` (features `io`, `async`) | `use xenoglyphiq_<lib>` |
+| Nim | `<lib>-nim` | Nimble `<lib>` | `import <lib>`, `<lib>/io` |
+| Zig | `<lib>-zig` | module `<lib>` in `build.zig.zon` | `@import("<lib>")` |
+| Julia | `<Lib>.jl` | `<Lib>` | `using <Lib>` |
 
-### Notes by language
+### Rules
 
-**Go**
-- Package names are short, lowercase, with no underscores or mixed caps.
-- Never put `go` in the package name. The `go-` prefix lives only in the repo and
-  module path.
-- From v2 on, the module path ends in `/v2` (Go's major-version suffix rule).
+- **Go** module paths are lowercase (`github.com/xenoglyphiq/...`). Go treats them
+  case-sensitively, so never mix cases.
+- **Python and Rust** registry names carry a `xenoglyphiq-` prefix, which leaves generic
+  names like `pmtiles` free for the format's own projects.
+- **Swift, Nim, Zig and Julia** packages have no org prefix; the repo URL carries the org.
+- **Kotlin** uses the group ID `com.xenoglyphiq`.
+- **When a name is taken** in a registry, pick the closest name that passes that
+  registry's checks, never a near-copy like `Name2`, and say so in the spec repo's port
+  table. Example: `Polyline` is taken in Julia's General registry, so the Julia port is
+  `EncodedPolyline.jl`.
+- **Check the registry first** (Swift Package Index, pkg.go.dev, PyPI, Maven Central,
+  crates.io, Nimble, Julia's General).
+- **Add GitHub topics:** the language, the library's subject (for example `pmtiles`,
+  `robots-txt`) and, for Zig, `zig-package` so zigistry lists it.
 
-**Swift**
-- The `swift-` repo prefix follows Apple's own packages (`swift-nio`,
-  `swift-argument-parser`).
-- Use a `Kit` suffix on the module (`TOMLKit`) only when the plain name would clash with
-  another common module.
+## Why one repo per language
 
-**Nim**
-- Nimble package names must be unique across the whole registry, and module names
-  can't contain hyphens.
-- If `<name>` is taken on Nimble, the package name and the import must change together.
-  Keep the repo as `nim-<name>`.
-
-**Zig**
-- Recent Zig versions declare the package name in `build.zig.zon` as an
-  identifier-style enum literal (`.name = .toml`), so use snake_case.
-- `zig-<name>` is the most common repo pattern. A `<name>.zig` repo name is also
-  common in the Zig world; pick one and stay consistent.
-
-**Rust**
-- The `-rs` repo suffix is a convention. The crate name should be the plain name when
-  it's available on crates.io.
-
-## Repo layout
-
-Use **one repo per language per library**. Avoid a single repo with a folder per language,
-because Swift Package Manager expects `Package.swift` at the repo root and Go
-modules get awkward in subfolders.
+Swift Package Manager needs `Package.swift` at the repo root, and Zig packages are
+fetched from the repo root. Each registry also has its own tags and release flow. One rule
+for every language keeps the tooling simple.

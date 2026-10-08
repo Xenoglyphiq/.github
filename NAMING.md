@@ -29,14 +29,22 @@ crate, import) follows the language's own rules.
 | Zig | `<lib>-zig` | module `<lib>` in `build.zig.zon` | `@import("<lib>")` |
 | Julia | `<Lib>.jl` | `<Lib>` | `using <Lib>` |
 
-### Rules
+### Rules by language
 
-- **Go** module paths are lowercase (`github.com/xenoglyphiq/...`). Go treats them
+- **Swift:** no org prefix in the package name; the repo URL carries the org.
+- **Go:** module paths are lowercase (`github.com/xenoglyphiq/...`). Go treats them
   case-sensitively, so never mix cases.
-- **Python and Rust** registry names carry a `xenoglyphiq-` prefix, which leaves generic
-  names like `pmtiles` free for the format's own projects.
-- **Swift, Nim, Zig and Julia** packages have no org prefix; the repo URL carries the org.
-- **Kotlin** uses the group ID `com.xenoglyphiq`.
+- **Python:** the PyPI name carries a `xenoglyphiq-` prefix, which leaves generic names
+  like `pmtiles` free for the format's own projects.
+- **Kotlin:** the Maven group ID is `com.xenoglyphiq`.
+- **Rust:** the crate name carries a `xenoglyphiq-` prefix, for the same reason as Python.
+- **Nim:** no org prefix in the Nimble name; the repo URL carries the org.
+- **Zig:** no org prefix in the module name; the repo URL carries the org.
+- **Julia:** no org prefix in the package name; the repo URL carries the org, and the repo
+  name ends in `.jl`.
+
+### Rules for every language
+
 - **When a name is taken** in a registry, pick the closest name that passes that
   registry's checks, never a near-copy like `Name2`, and say so in the spec repo's port
   table. Example: `Polyline` is taken in Julia's General registry, so the Julia port is
